@@ -18,10 +18,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from twitterBack.views import home
 
 from twitterBack import urls
+
+from django.http import HttpResponse
+
+def home(request): 
+    return HttpResponse("Bem-vindo ao Twitter Clone!")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('twitterBack.urls')),
+    path('', home),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
