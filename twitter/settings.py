@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-im$fzalv1e1(8mhr8$fb+=hl1$=h!a1y7nt@!z73y^zpa)*%@s'
+SECRET_KEY = os.getenv('SECRET_KEY', 'sua-chave-secreta-local')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://postgres:fFqgxJTQJbofWiZqaRCTxRiqmXSqHQPU@shortline.proxy.rlwy.net:40128/Database',
+        default='',
         conn_max_age=600,
         ssl_require=True
     )
