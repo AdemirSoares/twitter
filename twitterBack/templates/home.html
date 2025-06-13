@@ -2,14 +2,48 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Twitter Clone - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twitter Clone - Página Inicial</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
-    h1 { color: #1DA1F2; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1DA1F2;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #0d8ddb;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #0b7ac1;
+    }
   </style>
 </head>
 <body>
   <h1>Bem-vindo ao Twitter Clone!</h1>
-  <p>Esta é a página inicial do seu projeto.</p>
+  <p>Este é o início do seu projeto. Explore e crie algo incrível!</p>
+  <a href="/api/">Ir para a API</a>
 </body>
 </html>
