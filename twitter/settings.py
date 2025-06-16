@@ -68,7 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                 'django.template.context_processors.debug',
+                'django.template.context_processors.debug',
             ],
         },
     },
@@ -143,6 +143,10 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5174",  # frontend local
     "http://localhost:5175",
+    "http://localhost:5176",
+    "http://127.0.0.1:5176",
+     "http://localhost:5177",  # novo (inclua essa!)
+    "http://127.0.0.1:5177",  # para garantir também
     "https://twitter-copia-30e8776f1c23.herokuapp.com",  # backend no Heroku
 ]
 
