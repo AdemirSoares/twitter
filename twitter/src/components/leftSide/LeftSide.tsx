@@ -14,7 +14,7 @@ function LeftSide() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const ReturnHome = () => {
-    navigate("/");
+    navigate("/home");
   };
 
   const GoToProfile = () => {
