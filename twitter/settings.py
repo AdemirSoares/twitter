@@ -141,7 +141,9 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5174",  # frontend em Vite local
+    "http://localhost:5174",  # frontend local
+    "http://localhost:5175",
+    "https://twitter-copia-30e8776f1c23.herokuapp.com",  # backend no Heroku
 ]
 
 MEDIA_URL = '/media/'
