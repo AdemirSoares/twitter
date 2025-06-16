@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # frontend em Vite local
+    "http://localhost:5175",  # Adicione esta linha
 ]
 
 MEDIA_URL = '/media/'
