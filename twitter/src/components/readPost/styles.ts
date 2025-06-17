@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 interface Props {
-  hovercolor?: string;
-  toppos?: number;
+  $hovercolor?: string;
+  $toppos?: number;
   leftpos?: number;
 }
 
@@ -208,7 +208,7 @@ export const UserInteractHover = styled.div<Props>`
 
   border-radius: 50%;
 
-  top: ${(props) => (props.toppos ? props.toppos : 0)}%;
+  top: ${(props) => (props.$toppos ? props.$toppos : 0)}%;
   left: ${(props) => (props.leftpos ? props.leftpos : 50)}%;
 
   transform: translate(-50%, -60%);
@@ -217,7 +217,7 @@ export const UserInteractHover = styled.div<Props>`
 
   &:hover {
     background-color: rgba(
-      ${(props) => (props.hovercolor ? props.hovercolor : "0,0,0,0")}
+      ${(props) => (props.$hovercolor ? props.$hovercolor : "0,0,0,0")}
     );
   }
 `;

@@ -164,7 +164,7 @@ function CreateNewPost() {
         />
         <div onClick={selectFile} style={{ position: "relative" }}>
           <img src="/image.svg" alt="Select Media" />
-          <S.UserInteractHover hovercolor="29, 146, 227, 0.4" />
+          <S.UserInteractHover $hovercolor="29, 146, 227, 0.4" />
         </div>
         <S.Post
           style={{

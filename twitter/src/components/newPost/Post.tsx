@@ -137,13 +137,13 @@ function Post({ item }: PostApi) {
             )}
 
             <S.PostInteract>
-              <S.PostUserInteract hovercolor="29, 146, 227, 0.4">
+              <S.PostUserInteract $hovercolor="29, 146, 227, 0.4">
                 <div style={{ position: "relative" }}>
                   <img src="/message.svg" alt="Post Comments" />
                 </div>
                 <span>{item.comments}</span>
               </S.PostUserInteract>
-              <S.PostUserInteract hovercolor="249, 54, 128, 0.4">
+              <S.PostUserInteract $hovercolor="249, 54, 128, 0.4">
                 <div style={{ position: "relative" }}>
                   <img
                     src={
@@ -156,7 +156,7 @@ function Post({ item }: PostApi) {
                 </div>
                 <span>{item.likes}</span>
               </S.PostUserInteract>
-              <S.PostUserInteract hovercolor="0, 186, 124, 0.4">
+              <S.PostUserInteract $hovercolor="0, 186, 124, 0.4">
                 <div style={{ position: "relative" }}>
                   <img src="/eye.svg" alt="Post Views" />
                 </div>

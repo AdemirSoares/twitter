@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 interface Props {
-  hovercolor?: string;
-  toppos?: number;
+  $hovercolor?: string;
+  $toppos?: number;
 }
 
 export const Container = styled.div`

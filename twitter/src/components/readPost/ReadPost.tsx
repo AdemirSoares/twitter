@@ -285,8 +285,8 @@ function ReadPost() {
                   >
                     <img src="/arrow-left.svg" alt="Return arrow" />
                     <S.UserInteractHover
-                      toppos={62}
-                      hovercolor="255, 255, 255, 0.3"
+                      $toppos={62}
+                      $hovercolor="255, 255, 255, 0.3"
                     />
                   </div>
 
@@ -326,9 +326,9 @@ function ReadPost() {
                         >
                           <span>. . .</span>
                           <S.UserInteractHover
-                            toppos={78}
+                            $toppos={78}
                             leftpos={97.8}
-                            hovercolor="29, 146, 227, 0.4"
+                            $hovercolor="29, 146, 227, 0.4"
                           />
                         </S.OpenOptions>
                         <S.SelectionMenu
@@ -413,18 +413,18 @@ function ReadPost() {
                       <S.PostInteract>
                         <S.PostUserInteract
                           onClick={openReplyMenuHandle}
-                          hovercolor="29, 146, 227, 0.4"
+                          $hovercolor="29, 146, 227, 0.4"
                         >
                           <div style={{ position: "relative" }}>
                             <img src="/message.svg" alt="Post Comments" />
                             <S.UserInteractHover
-                              toppos={62}
-                              hovercolor="29, 146, 227, 0.4"
+                              $toppos={62}
+                              $hovercolor="29, 146, 227, 0.4"
                             />
                           </div>
                           <span>{state.postInfo?.comments}</span>
                         </S.PostUserInteract>
-                        <S.PostUserInteract hovercolor="249, 54, 128, 0.4">
+                        <S.PostUserInteract $hovercolor="249, 54, 128, 0.4">
                           {state.postInfo ? (
                             <div
                               onClick={likePost}
@@ -441,8 +441,8 @@ function ReadPost() {
                                 alt="Like Post"
                               />
                               <S.UserInteractHover
-                                toppos={62}
-                                hovercolor="249, 54, 128, 0.4"
+                                $toppos={62}
+                                $hovercolor="249, 54, 128, 0.4"
                               />
                             </div>
                           ) : (
@@ -450,12 +450,12 @@ function ReadPost() {
                           )}
                           <span>{state.postInfo?.likes}</span>
                         </S.PostUserInteract>
-                        <S.PostUserInteract hovercolor="0, 186, 124, 0.4">
+                        <S.PostUserInteract $hovercolor="0, 186, 124, 0.4">
                           <div style={{ position: "relative" }}>
                             <img src="/eye.svg" alt="Post Views" />
                             <S.UserInteractHover
-                              toppos={62}
-                              hovercolor="0, 186, 124, 0.4"
+                              $toppos={62}
+                              $hovercolor="0, 186, 124, 0.4"
                             />
                           </div>
                           <span>{state.postInfo?.views}</span>
@@ -464,8 +464,8 @@ function ReadPost() {
                           <div style={{ position: "relative" }}>
                             <img src="/bookmark.svg" alt="Save post" />
                             <S.UserInteractHover
-                              toppos={62}
-                              hovercolor="255, 249, 31, 0.6"
+                              $toppos={62}
+                              $hovercolor="255, 249, 31, 0.6"
                             />
                           </div>
                         </S.PostUserInteract>

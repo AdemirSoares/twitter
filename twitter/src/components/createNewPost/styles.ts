@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface Props {
-  hovercolor: string;
+  $hovercolor: string;
 }
 
 export const Form = styled.form`
@@ -93,7 +93,7 @@ export const UserInteractHover = styled.div<Props>`
 
   &:hover {
     background-color: rgba(
-      ${(props) => (props.hovercolor ? props.hovercolor : "0,0,0,0")}
+      ${(props) => (props.$hovercolor ? props.$hovercolor : "0,0,0,0")}
     );
   }
 
