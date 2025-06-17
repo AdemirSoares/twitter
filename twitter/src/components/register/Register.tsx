@@ -43,7 +43,7 @@ function Register({ isMenuOpen, setIsMenuOpen }: MenuType) {
           setEmail("");
           setPassword("");
 
-          navigate("/home");
+          navigate("/");
 
           setTimeout(() => {
             setAccountCreated(false);

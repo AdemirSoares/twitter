@@ -32,7 +32,7 @@ function Login({ isLoginOpen, setIsLoginOpen }: MenuType) {
           localStorage.setItem("userId", String(res.data.user_id)); // Garantido como string
 
           setError(false);
-          navigate("/home");
+          navigate("/");
         } else {
           setError(true);
         }

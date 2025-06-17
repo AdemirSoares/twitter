@@ -192,7 +192,7 @@ function UserProfile() {
   };
 
   const returnHome = () => {
-    navigate("/home");
+    navigate("/");
   };
 
   const postsStyle = {

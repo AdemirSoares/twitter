@@ -30,7 +30,7 @@ function ReadPost() {
   });
 
   const returnHome = () => {
-    navigate("/home");
+    navigate("/");
   };
 
   const visitProfile = () => {
@@ -241,7 +241,7 @@ function ReadPost() {
       setState((prev) => ({ ...prev, isEditing: false }));
       setState((prev) => ({ ...prev, openMenu: false }));
 
-      navigate("/home");
+      navigate("/");
     }
   };
 
