@@ -141,6 +141,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
+    "https://twitter-five-rho.vercel.app",
     "http://localhost:5173",
     "http://localhost:5174",  # frontend local
     "http://localhost:5175",
