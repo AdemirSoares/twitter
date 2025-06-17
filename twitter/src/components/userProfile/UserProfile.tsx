@@ -218,8 +218,8 @@ function UserProfile() {
                   <S.ReturnArrow onClick={returnHome}>
                     <img src="/arrow-left.svg" alt="Return Arrow" />
                     <S.UserInteractHover
-                      toppos={60}
-                      hovercolor="255, 255, 255, 0.3"
+                      $toppos={60}
+                      $hovercolor="255, 255, 255, 0.3"
                     />
                   </S.ReturnArrow>
                   <S.UserInfos>
