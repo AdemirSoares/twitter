@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="/home"
           element={
             <ProtectRoute>
               <App />

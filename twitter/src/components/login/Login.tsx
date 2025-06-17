@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import API_BASE_URL from "../../config/api";
-
 import * as S from "./styles";
 
 type MenuType = {
@@ -16,7 +15,6 @@ function Login({ isLoginOpen, setIsLoginOpen }: MenuType) {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const [error, setError] = useState(false);
 
   const createAccount = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,27 +23,22 @@ function Login({ isLoginOpen, setIsLoginOpen }: MenuType) {
     const loginAsync = async () => {
       try {
         const res = await axios.post(`${API_BASE_URL}/login/`, {
-          username: username,
-          password: password,
-          token: localStorage.getItem("token"),
+          username,
+          password,
         });
 
-        if (res.data.token) {
+        if (res.data.token && res.data.user_id) {
           localStorage.setItem("token", res.data.token);
-          localStorage.setItem("userId", res.data.user_id);
+          localStorage.setItem("userId", String(res.data.user_id)); // Garantido como string
 
-          if (localStorage.getItem("token") !== undefined) {
-            navigate("/home");
-
-            setError(false);
-          }
+          setError(false);
+          navigate("/home");
         } else {
           setError(true);
         }
       } catch (err) {
-        console.log(err);
-
-        return <h1>Error</h1>;
+        console.error("Erro no login:", err);
+        setError(true);
       }
     };
 
@@ -61,7 +54,7 @@ function Login({ isLoginOpen, setIsLoginOpen }: MenuType) {
       <S.Wrapper>
         <S.TwitterLogo src="/twitter.png" />
 
-        <S.Form onSubmit={(e) => createAccount(e)}>
+        <S.Form onSubmit={createAccount}>
           <S.CloseButton onClick={closeMenu} src="x.svg" />
           <S.CreateAccountText>Logar na sua conta</S.CreateAccountText>
 
@@ -78,9 +71,11 @@ function Login({ isLoginOpen, setIsLoginOpen }: MenuType) {
             placeholder="Senha"
             type="password"
           />
+
           <S.AccountError style={{ display: error ? "block" : "none" }}>
-            Credenciais invalidas
+            Credenciais inválidas
           </S.AccountError>
+
           <S.CreateAccountButton>Entrar</S.CreateAccountButton>
         </S.Form>
       </S.Wrapper>
