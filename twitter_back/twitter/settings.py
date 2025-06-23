@@ -154,3 +154,11 @@ CORS_ALLOWED_ORIGINS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dceqrhvi4',
+    'API_KEY': '516257294379938',
+    'API_SECRET': 'Y3RNq6_t23lyoWj5fY4ok6TH_uM',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
