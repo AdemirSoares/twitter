@@ -33,6 +33,7 @@ function LeftSide() {
             },
           })
           .then((res) => {
+            console.log("Profile API response:", res.data);
             setUserInfo(res.data);
           });
       } catch (err) {
