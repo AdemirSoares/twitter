@@ -8,6 +8,7 @@ __pycache__/
 *.sqlite3
 .env
 .env.*  # Arquivos de ambiente como .env.local
+.idea/
 
 # --- Virtualenv ---
 venv/
