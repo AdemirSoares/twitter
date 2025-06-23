@@ -18,7 +18,9 @@ function LeftSide() {
   };
 
   const GoToProfile = () => {
-    navigate(`/${userInfo?.userat}/${userInfo?.id}/profile`);
+    if (userInfo && userInfo.userat && userInfo.id) {
+      navigate(`/${userInfo.userat}/${userInfo.id}/profile`);
+    }
   };
 
   useEffect(() => {
@@ -65,7 +67,10 @@ function LeftSide() {
                 <S.ButtonImage src="/house.svg" />
                 <S.Button>Home</S.Button>
               </S.Wrapper>
-              <S.Wrapper onClick={GoToProfile}>
+              <S.Wrapper 
+                onClick={userInfo ? GoToProfile : undefined} 
+                style={{ opacity: userInfo ? 1 : 0.5, pointerEvents: userInfo ? 'auto' : 'none' }}
+              >
                 <S.ButtonImage src="/profile.svg" />
                 <S.Button>Perfil</S.Button>
               </S.Wrapper>
