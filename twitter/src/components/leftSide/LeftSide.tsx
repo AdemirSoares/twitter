@@ -25,19 +25,24 @@ function LeftSide() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const userId = localStorage.getItem('userId');
+      const token = localStorage.getItem('token');
+
+      if (!userId || !token) {
+        console.warn('Usuário não autenticado ou ID ausente.');
+        return;
+      }
+
       try {
-        await axios
-          .get(`${API_BASE_URL}/profiles/${localStorage.getItem("userId")}/`, {
+        const res = await axios.get(`${API_BASE_URL}/profiles/${userId}/`, {
             headers: {
-              Authorization: `Token ${localStorage.getItem("token")}`,
+              Authorization: `Token ${token}`,
             },
-          })
-          .then((res) => {
-            console.log("Profile API response:", res.data);
-            setUserInfo(res.data);
           });
-      } catch (err) {
-        console.log(err);
+          console.log("Profile API response:", res.data);
+          setUserInfo(res.data);
+        } catch (err) {
+          console.log('Erro ao buscar o perfil:', err);
       }
     };
 
