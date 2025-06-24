@@ -28,8 +28,11 @@ function LeftSide() {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('token');
 
-      if (!userId || !token) {
-        console.warn('Usuário não autenticado ou ID ausente.');
+      console.log('userId:', userId);
+      console.log('token:', token);
+
+      if (!userId || userId === 'NaN' || userId === 'null' || userId === 'undefined' || !token) {
+        console.warn('Usuário não autenticado ou ID ausente ou inválido. userId:', userId);
         return;
       }
 
